@@ -1,41 +1,47 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+---
+layout: default
+title: "MarkSheet: a free HTML and CSS tutorial"
+route: index
+---
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=1">
+<section class="index-hello">
+  <div class="index-hello-content">
+    <hgroup class="hello">
+      <h1>MarkSheet</h1>
+      <h2>a free HTML and CSS tutorial</h2>
+    </hgroup>
 
-    {% seo %}
-</head>
-
-<body>
-
-    <header>
-        <div class="container">
-            <a id="a-title" href="{{ '/' | relative_url }}">
-                <h1>{{ site.title | default: site.github.repository_name }}</h1>
-            </a>
-            <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-
-            <section id="downloads">
-                {% if site.show_downloads %}
-                <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
-                <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
-                {% endif %}
-                <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on
-                    GitHub</a>
-            </section>
-        </div>
-    </header>
-
-    <div class="container">
-        <section id="main_content">
-            {{ content }}
-        </section>
+    <div id="hello" class="share-buttons">
+      <div class="share-button--twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://marksheet.io" data-text="MarkSheet: a free HTML and CSS tutorial" data-via="jgthms">Tweet</a>
+      </div>
+      <div class="share-button--facebook">
+        <div class="fb-like" data-href="https://www.facebook.com/marksheet.io" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">Like</div>
+      </div>
     </div>
 
-</body>
+    {% include carbon.html %}
 
-</html>
+    <a class="start" href="/introduction.html">
+      Start reading
+    </a>
+  </div>
+</section>
+
+<section class="toc-head">
+  <div class="container">
+    <p class="toc-column--sections">
+      <strong>4</strong> sections
+    </p>
+
+    <p class="toc-column--chapters">
+      <strong>9</strong> chapters
+    </p>
+
+    <p class="toc-column--lessons">
+      <strong>50</strong> lessons
+    </p>
+  </div>
+</section>
+
+{% include table-of-contents.html %}
